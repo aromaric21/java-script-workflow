@@ -1,9 +1,20 @@
-// 1. Functions
-// 2. Regular function
-// 3. Arrow function
-const name ="Melvyn";
-function sayHello(){
-   console.log(`Hello ${name}!`);
-}
+// Objet / Tableau
 
-sayHello();
+// 1.Tableau
+/*let names =["Melvyn", "Alexandre", "Didier"];
+console.log(names);
+names = ["melvyn"]
+console.log(names);
+ */
+
+
+//2.Objet
+const user = {
+   name : "Melvyn",
+   age : 42
+}
+user.age = 55;
+console.log(user);
+
+
+
