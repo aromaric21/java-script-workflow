@@ -2,13 +2,19 @@ import './style.css'
 
 const app = document.querySelector("#app");
 
-const colors = ["red", "blue", "yellow"];
+console.log({
+    parent: app.parentElement,
+    prevSister: app.previousElementSibling,
+    nextSister: app.nextElementSibling,
+    firstChild: app.firstElementChild,
+    lastChild: app.lastElementChild,
+    children: app.children,
+});
 
-let i = 0;
-setInterval(() => {
-    app.style.background = colors[i];
-    i++;
-    if (i > colors.length -1 ) {
-        i=0;
-    }
-}, 1000);
+document.getElementById
+// ->document.querySelector("#id")
+document.getElementsByClassName
+// ->document.querySelector("#.className")
+document.getElementsByTagName
+// ->document.querySelector("tagName")
+
