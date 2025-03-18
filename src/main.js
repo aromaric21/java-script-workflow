@@ -1,34 +1,24 @@
-import './style.css'
+import './style.css';
+import {Questions} from "./questions.js";
+
+//console.log(Questions);
 
 const app = document.querySelector("#app");
+const startButton = document.querySelector("#start");
 
-// Déconseillé
-app.innerHTML= `<div>
-<h1>
-Salut
-<h1>
-<input/>
-</div>`;
+let i = 0;
 
-// Conseillé
-const div = document.createElement("div");
-console.log({
-    parentElement: div.parentElement,
-    contenue: div.innerHTML,
+startButton.addEventListener("click", () => {
+    const question =
+        document.querySelector("#question") ?? document.createElement("p");
+    question.id = "question";
+    question.innerText = Questions[i].question;
+    app.insertBefore(question, startButton);
+
+    i++;
+    if (i > Questions.length - 1) {
+        i= 0;
+    }
 });
-
-const title = document.createElement("h1");
-title.classList.add("big-title", "title");
-title.style.background= "blue";
-title.innerText = "Romaric !";
-div.appendChild(title);
-
-const input = document.createElement("input");
-div.appendChild(input);
-app.appendChild(div);
-
-app.appendChild(div);
-
-
 
 
